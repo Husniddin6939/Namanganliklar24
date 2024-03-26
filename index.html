@@ -44,8 +44,7 @@
                             <p class="flex gap-x-[5px]"><img
                                     src="./Images/russian.svg" alt="icon">РУ</p>
                         </div>
-                        <button
-                            class="flex items-center py-[10px] px-[10px] bg-gradient-to-r from-[#1E96C8] to-[#37AEE2] rounded-[5px] gap-x-[7px]"><img
+                        <button id="modal-otn" class="flex items-center py-[10px] px-[10px] bg-gradient-to-r from-[#1E96C8] to-[#37AEE2] rounded-[5px] gap-x-[7px]"><img
                                 src="./Images/tg.svg"
                                 alt="icon">Подписатся</button>
                     </nav>
@@ -85,7 +84,7 @@
         </header>
 
         <!-- modal pg start-->
-        <div id="modal-pg" class="modal h-[100vh] flex items-center fixed top-0 w-[100vw] backdrop-blur-[5px] bg-[#4451663D]">
+        <div id="modal-pg" class="hidden h-[100vh] flex items-center fixed top-0 w-[100vw] backdrop-blur-[5px] bg-[#4451663D]">
             <div class="container mx-auto flex items-center justify-center">
                 <div class="card relative flex flex-col items-center gap-6 bg-[#FFFFFF] w-[819px] h-[231px] rounded-[5px] pe-[63px] ps-[78px] pt-[46px] pb-[32px]">
                     <button id="modal" class="absolute right-4 top-4">
@@ -305,6 +304,26 @@
 
             </div>
         </footer>
+
+
+
+    <script>
+
+        let controlBtn = document.getElementById("modal-otn")
+        let modalPg = document.getElementById("modal-pg")
+        let modal = document.getElementById("modal")
+
+
+        controlBtn.addEventListener('click', function() {
+            modalPg.classList.toggle('hidden')
+        })
+
+        modal.addEventListener('click', function(){
+            modalPg.classList.toggle('hidden')
+        })
+
+    </script>
+
 
     </body>
 </html>
